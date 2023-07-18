@@ -17,7 +17,7 @@ const server = http.createServer((req, res) => {
         const fileExt = path.extname(filePath);
         if (fileExt === '.html') {
             //call back parameter if exists
-            fs.existsSync(filePath, (exists) => {
+            fs.exists(filePath, (exists) => {
                 if (!exists) {
                     res.statusCode = 404
                     res.setHeader('Content-Type', 'text/html');
@@ -32,13 +32,11 @@ const server = http.createServer((req, res) => {
             res.statusCode = 404
             res.setHeader('Content-Type', 'text/html');
             res.end('<html><body><h1>Error 404: '+ fileUrl +' page not an html file!</h1></body></html>');
-            return;
         }
     } else {
         res.statusCode = 404
         res.setHeader('Content-Type', 'text/html');
         res.end('<html><body><h1>Error 404: '+ req.method +' not supported!</h1></body></html>');
-        return;
     }
 })
 
