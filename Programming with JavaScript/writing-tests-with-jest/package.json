@@ -1,0 +1,14 @@
+{
+  "name": "writing-tests-with-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "addFive.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Seema Thapa",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.4"
+  }
+}
