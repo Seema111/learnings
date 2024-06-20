@@ -16,6 +16,17 @@
 
 function maxDistance(position, m) {
     // Helper function to determine if we can place m balls with at least minForce distance
+ /**
+  * @description Determines if a set of balls can be placed in baskets such that the
+  * distance between each ball and its previous position is greater or equal to a
+  * minimum force value.
+  * 
+  * @param { integer } minForce - minimum distance between two consecutive placed
+  * balls, which must be traversed before a new ball can be placed in a basket.
+  * 
+  * @returns { boolean } a boolean indicating whether all balls can be placed in the
+  * designated baskets with at least the minimum force.
+  */
  function canPlaceBalls(minForce) {
      let count = 1; // We place the first ball in the first basket
      let lastPosition = position[0]; // The position of the last placed ball
